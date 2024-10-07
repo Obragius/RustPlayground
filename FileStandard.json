@@ -1,0 +1,23 @@
+// Jiffy 0.1
+{
+	"version": "VERSION",
+	"type": "TYPE",
+	"timestamp": "TIMESTAMP",
+	"data-type": "DATATYPE",
+	"data-id": "ID",
+	"data-packet": "PACKETINFO",
+	"data-length": "DATALENGTH",
+	"data": "DATA",
+	"data-hash": "DATAHASH",
+	"encryption": "ALGORITHM"
+}
+// VERSION - The version of the software that has sent the message, older decoders might need to be maintained to ensure older version messages can be read. [0.1]
+// TYPE - The message can be either sending data or acknoloding data, so the type of the message is important and one decoder can be used. ["MESSAGE","ACK"]
+// TIMESTAMP - This will be the time at which the message has been sent, which might be important later. [TIME]
+// DATATYPE - This will be the type of data that has been sent, it will be text for now but might expand. ["TEXT"]
+// ID - This will be a unique ID of the message in this chat. [ID]
+// PACKETINFO - This will be an array of length two, which will tell how many communications will be in one message, the first number is the index of this message and the second is the number of communications. [NUM,NUM]
+// DATALENGTH - This is the length of the data, used to verify the length of the message. [NUM]
+// DATA - The data as bytes whatever data is sent. [DATA]
+// DATAHASH - The hash of the data sent for error checking. [HASH]
+// ALGORITHM - The algorithm used to encrypt the data, I don't know which one will be used. [ALGO]
